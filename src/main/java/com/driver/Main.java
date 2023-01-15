@@ -1,22 +1,27 @@
 package com.driver;
 
-import java.util.Scanner;
 
 public class Main {
-
+  static  class Product {
+      public int product(int x, int y)
+      {
+          return x*y ;
+      }
+      public int product(int x, int y, int z)
+      {
+          return x*y*z ;
+      }
+      public double product(double x, double y) {
+          return (double) x*y ;
+      }
+  }
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in) ;
-        int x = sc.nextInt() ;
-        int y = sc.nextInt() ;
-        int z = sc.nextInt() ;
         Product p = new Product() ;
-        int result =   p.product(x,y) ;
-        System.out.println(result);
-        System.out.println(p.product(x,y,z));
-        double result1 = p.product((double)x,(double)y) ;
-        System.out.println(result1);
-
+        int result1 =   p.product(2,1) ;
+        //System.out.println(result);
+        int result2 =  p.product(2,1,2) ;
+        double result3 = p.product(2.01,2.00) ;
+        // System.out.println(result1);
     }
-
 }
